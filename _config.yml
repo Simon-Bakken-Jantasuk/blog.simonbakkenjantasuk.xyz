@@ -28,7 +28,7 @@ url: "https://simonbakkenjantasuk.xyz"
 # Build settings
 remote_theme: jekyll/minima
 minima:
-  skin: dark
+  skin: auto 
   social_links:
     - { platform: github,  user_url: "https://github.com/Simon-Bakken-Jantasuk" }
     - { platform: stackoverflow, user_url: "https://stackoverflow.com/users/20717655/simon-bakken-jantasuk" }
