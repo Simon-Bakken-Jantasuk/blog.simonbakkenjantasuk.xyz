@@ -22,17 +22,20 @@ title: Simon Bakken-Jantasuk
 email: simonbakkenjantasuk@pm.me
 description: >- 
   En blog som handler seg om Linux, programvarer, matematikk og programmering. I andre ord– en veldig based blog.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" 
 url: "https://simonbakkenjantasuk.xyz" 
-twitter_username: jekyllrb
-github_username:  jekyll
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima
 minima:
   skin: dark
+  social_links:
+    - { platform: github,  user_url: "https://github.com/Simon-Bakken-Jantasuk" }
+    - { platform: stackoverflow, user_url: "https://stackoverflow.com/users/20717655/simon-bakken-jantasuk" }
+    - { platform: instagram, user_url: "https://www.instagram.com/bakkenjantasuk/"}
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.

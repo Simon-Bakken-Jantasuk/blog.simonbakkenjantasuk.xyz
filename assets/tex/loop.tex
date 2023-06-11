@@ -1,0 +1,202 @@
+%!TeX ts-program = xelatex
+%!TeX encoding = utf-8 Unicode
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage[norsk]{babel}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breaklines=true,
+  postbreak=\raisebox{0ex}[0ex][0ex]{\color{red}$\hookrightarrow$\space}
+}
+
+\title{Loop}
+\author{Simon Bakken-Jantasuk}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\pagebreak
+
+\section{Introduksjon} % (fold)
+\label{sec:introduksjon}
+\subsection{Hensikt} % (fold)
+\label{sub:hensikt}
+\begin{flushleft}
+	\begin{enumerate}
+		\item Undersøke bevegelsen til et legeme som beveger seg på en loopbane
+	\end{enumerate}
+\end{flushleft}
+\subsection{Oppsummering} % (fold)
+\label{sub:oppsummering}
+\begin{flushleft}
+	Vi har eksperimentert på flere forskjellige høyder for en kule som skulle gå gjennom en loop.
+\end{flushleft}
+% subsection oppsummering (end)
+% subsection hensikt (end)
+% section introduksjon (end)
+
+\textbf{Utstyr} 
+\begin{enumerate}
+	\item Loopbane 
+	\item Kule
+	\item Linjal
+\end{enumerate}
+
+\section{Teori} % (fold)
+\label{sec:teori}
+Vi vet kulen får en kinetisk energi, 
+\[
+E_k = \frac{1}{2}mv^2 
+\]
+Og en potensiell energi,
+\[
+V_g = mgh
+\]
+Det vil si at den vil ha en mekanisk energi, 
+\[
+E = \frac{1}{2}mv^2 + mgh
+\]
+Dersom vi velger nullnivå som bunnen av loopen, så vil den ha en slutt mekanisk energi 
+\[
+E_0 = \frac{1}{2}mv_0^2+mgh_0
+\]
+Dersom vi antar at det ikke er noe tap av energi,
+\[
+E = E_0 \Leftrightarrow \frac{1}{2}mv^2 + mgh = \frac{1}{2}mv_0^2 + mgh_0
+\]
+Det er ingen start kinetisk energi, $\frac{1}{2}mv_0^2$, vi får
+\[
+\frac{1}{2}mv^2 + mgh = mgh_0
+\]
+Vi bestemmer $h_0$ til å være den høyden vi bestemmer, og h til å være slutt høyden. Denne slutt høyden må være $h = 2r$ for å bevege gjennom hele loopen. Vi løser dermed for $h_0$,
+\[
+	(1): h_0 = \frac{1}{2g}v^2 + 2r 
+\]
+Den minste farten for å gå gjennom hele loopen må være når 
+normal kraften $N$ blir nærme  $0$
+ \[
+\sum_{}^{}F =  m \frac{v^2}{r}
+\]
+Hvor,
+\[
+mg = m \frac{v^2}{r}
+\]
+Vi får, 
+\[
+v = \sqrt{rg} 
+\]
+Ifølge $(1)$, så får vi,
+ \[
+h_0 = \frac{rg}{2g} + 2r = \frac{5r}{2} 
+\]
+
+\begin{figure}
+  \centering
+  \includegraphics[angle=0,width=0.5\textwidth]{circle.png}
+  \caption{Loop (N, normalkraft, G, gravitasjon kraft)}
+  \label{fig:circle.png} 
+\end{figure}
+% section teori (end)
+
+\section{Fremgangsmåte} % (fold)
+\label{sec:fremgangsmåte}
+\begin{enumerate}
+	\item   Gjør nødvendige målinger for å regne ut hvilken høyde du må slippe legemet fra slik at det akkurat går gjennom loopen. Finn usikkerheten i målingene.
+	\item Slipp legemet fra forskjellige høyder, og finn høyden som gjør at legemet akkurat går gjennom loopen. Mål denne høyden med usikkerhet.
+\end{enumerate}
+\subsection{Målinger} % (fold)
+\label{sub:målinger}
+Radiusen $r$ er målt $10$ cm \\
+Masse målt for kulen er $17$ g
+\begin{table}[htpb]
+	\centering
+	\caption{Høyde ($cm$)}
+	\label{tab:label}
+	\begin{tabular}{c c}
+		$H_1$ & $41$ cm \\
+		$H_2$ & $42$ cm \\
+		$H_3$ & $43$ cm \\
+	\end{tabular}
+\end{table}
+% subsection målinger (end)
+% section fremgangsmåte (end)
+\newpage
+\section{Resultat} % (fold)
+\label{sec:resultat}
+\subsection{Python - Teoretisk} % (fold)
+\label{sub:python_teoretisk}
+\begin{lstlisting}[frame=single][language=Python]
+h = [	
+        25, # Teoretisk, uten tap av energi 
+	41,
+        42,
+        43
+]
+
+avvik = ((max(h) - min(h))/2 
+
+def usikkerhet(absoluttSikkerhet, avvik):
+    return absoluttSikkerhet + avvik
+
+print(usikkerhet(h[0],avvik)) # +
+print(usikkerhet(h[0],-avvik)) # -
+\end{lstlisting}
+
+\begin{lstlisting}[frame=single][language=Python]
+Output:
+	34
+	16
+\end{lstlisting}
+% subsection python_teoretisk (end)
+\subsection{Python} % (fold)
+\label{sub:python}
+\begin{lstlisting}[frame=single][language=Python]
+h = [	
+        41,
+        42,
+        43
+]
+
+avvik = (max(h) - min(h))/2 
+
+def usikkerhet(absoluttSikkerhet, avvik):
+    return absoluttSikkerhet + avvik
+
+print(usikkerhet(h[0],avvik)) # +
+print(usikkerhet(h[0],-avvik)) # -
+\end{lstlisting}
+
+\begin{lstlisting}[frame=single][language=Python]
+Output:
+	41
+	40
+\end{lstlisting}
+% section resultat (end)
+\section{Diskusjon} % (fold)
+Den største feilkilden blir at vi brukte en kule med masse $27$ g og en kule med $17$ g. Resultatet blir forvansket. Dette er fordi det virker en friksjon. Legg merke til at den teoretiske delen, så er den teoretiske høyden $25$ cm, hvis vi ser bort fra tap av energi. De andre utregningene som kommer etter $\{41,42,43\}$ cm er det som blir målt ut ifra utgangspunktet fra $25$ cm. Den andre python koden vil gjøre det samme, men dette vil være usikkerhet med uten friksjon, og er meget nøyaktig.
+\label{sec:diskusjon}
+% section diskusjon (end)
+\subsection{Konklusjon} % (fold)
+\label{sub:konklusjon}
+\begin{flushleft}
+	Vi har funnet ut at friksjonen har en stor forskjell på høyden. Det vi har funnet er den minste høyden for at det skal gå gjennom en loop, og den var målt til å være $41$ cm. I tillegg til at massen har noe å si for friksjonen. Dersom det var tyngre– så er friksjonen mer– dersom mer høyde.
+\end{flushleft}
+% subsection konklusjon (end)
+\end{document}

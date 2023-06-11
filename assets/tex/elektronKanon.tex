@@ -1,0 +1,229 @@
+%!TeX ts-program = xelatex
+%!TeX encoding = utf-8 Unicode
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage[norsk]{babel}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breaklines=true,
+  postbreak=\raisebox{0ex}[0ex][0ex]{\color{red}$\hookrightarrow$\space}
+}
+
+\title{Elektron Kanon}
+\author{Simon Bakken-Jantasuk}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\pagebreak
+
+\section{Introduksjon} % (fold)
+\label{sec:introduksjon}
+\subsection{Hensikt} % (fold)
+\label{sub:hensikt}
+\begin{flushleft}
+	\begin{enumerate}
+		\item Undersøke banen til elektroner som blir akselerert fra ro av en spenning $U_1$ og går mellom to ladde, parallelle plater.
+	\end{enumerate}
+\end{flushleft}
+\subsection{Oppsummering} % (fold)
+\label{sub:oppsummering}
+\begin{flushleft}
+	Vi har skjekket hvorledes elektronen påvirkes gjennom et homogent elektrisk felt.
+\end{flushleft}
+% subsection oppsummering (end)
+% subsection hensikt (end)
+% section introduksjon (end)
+
+\textbf{Utstyr} 
+\begin{enumerate}
+	\item To spenning bokser
+	\item  Katode
+	\item Anode
+\end{enumerate}
+
+\section{Teori} % (fold)
+\label{sec:teori}
+\textbf{a)} \\
+Vi vet at,
+\[
+W = qU
+\]
+Hvor,
+\[
+W = \frac{1}{2}m_ev^2 \wedge q = e \wedge U = U_1
+\]
+Hvor vi løser for $v$,
+\[
+v = \sqrt{\frac{2eU_1}{m_e}}, Q.E.D
+\]
+Dette er farten den får når den passerer anoden. \\
+\textbf{b)} \\
+Dersom plateavstanden $d = 5 \times 10^{-2}$ m og  $U_2 = 60 V$
+Så kan vi finne ut det elektriske felt mellom to plater, ved,
+\[
+E = \frac{U_2}{d}
+\]
+Vi får,
+\[
+	E = \frac{60V}{5 \times 10^{-2} m} 
+\]
+Som blir,
+\[
+	E = 12 \times 10^{-2} \frac{V}{m}
+\]
+Vi vet at elektronet er negativt ladd, dersom den positive platen er på toppen. Så vil elektronene bli tiltrukket oppover. \\
+\textbf{c)} \\
+\[
+	v = \sqrt{\frac{2eU_1}{m_e}} 
+\]
+Hvor,
+\[
+e = 1.60217646 \times 10^{-19}C \wedge m_e = 9.10938188 \times 10^{-31}kg
+\]
+\[
+v \approx 45941095 \frac{m}{s} 
+\]
+Vi må ta hensyn til relativitetsteori, dersom $v$ er større eller er lik $1\%$ av lysets hastighet, og det er den. \\
+\textbf{d)} \\
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=0,width=0.5\textwidth]{bane1.png}
+  \caption{Uten relativistisk effekt}
+  \label{fig:bane1.png} 
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=0,width=0.5\textwidth]{bane2.png}
+  \caption{Med relativistisk effekt}
+  \label{fig:bane2.png} 
+\end{figure}
+
+\textbf{e)} \\
+Vi vet
+\[
+	x = v_{0x}t \wedge y = \frac{1}{2}at^2 \wedge a_e = \frac{q_eE}{m}
+\]
+Vi løser for tiden $t$,
+\[
+	t = \frac{x}{v_{0x}}
+\]
+Vi får,
+\[
+y = \frac{1}{2}\frac{q_eEx^2}{mv^2}
+\]
+Vi vet at,
+\[
+E = \frac{U_2}{d}
+\]
+Det vil si at,
+\[
+y = \frac{1}{2}\frac{q_eUx^2}{dmv^2}
+\]
+Vi deler på y,
+\[
+y(2dm_ev^2) = q_eU_2x^2
+\]
+Vi deler på $2d$,
+\[
+m_ev^2 = \frac{1_eU_2x^2}{2dy}
+\]
+Vi vet at,
+\[
+p^2 = m^2v^2
+\]
+Da må vi gange med $m_e$, og vi får,
+ \[
+m_e^2v^2 = \frac{qeU_2x^2m_e}{2dy} = p^2, Q.E.D
+\]
+% section teori (end)
+
+\section{Fremgangsmåte} % (fold)
+\label{sec:fremgangsmåte}
+\begin{enumerate}
+	\item Noterer lengden langs x-aksen
+	\item Vi bestemmer spenning for $U_1$
+	\item Øker spenning for $U_2$
+	\item Noterer lengden langs y-aksen
+	\item Gjør steg (3) 3 ganger til, og (4) 3 ganger til
+\end{enumerate}
+\subsection{Målinger} % (fold)
+\label{sub:målinger}
+x-akse $10\times 10^{-2}$ m \\
+spenningen $U_1 = 3 \times 10^{-3} V$
+\begin{table}[htpb]
+	\centering
+	\caption{$U_2$}
+	\label{tab:label}
+	\begin{tabular}{c}
+		1kV \\
+		2kV \\
+		3kV \\
+	\end{tabular}
+\end{table}
+% subsection målinger (end)
+% section fremgangsmåte (end)
+\newpage
+\section{Resultat} % (fold)
+\label{sec:resultat}
+\begin{table}[htpb]
+	\centering
+	\caption{oppgave f}
+	\label{tab:label}
+	\begin{tabular}{| c | c | c | c | c | c}
+		$U_1$ & 1 & 1 & 1 & V\\
+		$U_2$ & 1 & 2 & 3 & V\\
+		$v$ & $0.04 \times 10^{9}$ & $0.04 \times 10^{9}$ &$0.04 \times 10^{9}$ & $\frac{m}{s}$ 
+	\end{tabular}
+\end{table}
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=0,width=0.5\textwidth]{f.png}
+  \caption{}
+  \label{fig:f.png} 
+\end{figure}
+\begin{table}[htpb]
+	\centering
+	\caption{oppgave g}
+	\label{tab:label}
+	\begin{tabular}{| c | c | c | c |}
+		$U_2$ & 1 & 2 & 3 \\
+		$y$ & 1 & 2 & 3
+	\end{tabular}
+\end{table}
+\section{Diskusjon} % (fold)
+\label{sec:diskusjon}
+\begin{flushleft}
+	Det gir mening at vi har fått samme fart $v$. Dette er fordi akselerasjonen $a$ er konstant.
+\end{flushleft}
+Vi vet,
+\[
+a = \frac{F_e}{m_e}
+\]
+Vi vet at det er et homogent felt. Det vil si at kraften $F_e$ lik hele tiden. Dermed er akselerasjonen $a$ konstant. Det vil si at $\Sigma F = 0$. Farten $v$ konstant. 
+% section diskusjon (end)
+\subsection{Konklusjon} % (fold)
+\begin{flushleft}
+	Vi vet at feltet er homogent, og at elektriske kraften er lik hele veien. Dette vil si at akselerasjonen er konstant. Vi har konkludert at farten er dermed konstant hele veien. 
+\end{flushleft}
+% subsection konklusjon (end)
+\end{document}

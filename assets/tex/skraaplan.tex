@@ -1,0 +1,232 @@
+%!TeX ts-program = xelatex
+%!TeX encoding = utf-8 Unicode
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage[norsk]{babel}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breaklines=true,
+  postbreak=\raisebox{0ex}[0ex][0ex]{\color{red}$\hookrightarrow$\space}
+}
+
+\title{Skråplan}
+\author{Simon Bakken-Jantasuk}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\listoftables
+
+\pagebreak
+
+\section{Introduksjon} % (fold)
+\label{sec:introduksjon}
+\subsection{Hensikt} % (fold)
+\label{sub:hensikt}
+\begin{flushleft}
+	\begin{enumerate}
+		\item Undersøke bevegelsen til en boks som beveger seg opp et skråplan
+	\end{enumerate}
+\end{flushleft}
+\subsection{Oppsummering} % (fold)
+Undersøkte bevegelsen til en boks, og har funnet ut at 
+\label{sub:oppsummering}
+% subsection oppsummering (end)
+% subsection hensikt (end)
+% section introduksjon (end)
+
+\textbf{Utstyr} 
+\begin{enumerate}
+	\item Gradskive
+	\item Boks
+	\item Fjær
+	\item Linjal
+\end{enumerate}
+\section{Teori} % (fold)
+\textbf{a)}
+\label{sec:teori}
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=0,width=0.5\textwidth]{skråplan.png}
+  \caption{I ro, så har vi normalkraft og gravitasjonskraft}
+  \label{fig:skråplan.png} 
+\end{figure} \\
+\textbf{b)} \\
+Vi vet at,	
+\[
+\mu = \frac{R}{N}
+\]
+Hvor $G_x = R$
+\[
+R = G\sin{\phi} \wedge N_y = G\cos{\phi}
+\]
+Det vil si,
+\[
+\mu = \frac{mg\sin{\phi}}{mg\cos{\phi}}
+\]
+Vi vet at,
+\[
+\tan{\phi} = \frac{\sin{\phi}}{\cos{\phi}}
+\]
+Da vet vi at,
+\[
+\mu = \tan{\phi}, Q.E.D
+\] \\
+\textbf{c)} \\
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=0,width=0.5\textwidth]{skraaplanopp.png}
+  \caption{I bevegelse opp: normalkraft, gravitasjonskraft og friksjonkraft}
+  \label{fig:skraaplanopp.png} 
+\end{figure} \\
+Uttrykk for akselerasjonen blir,
+\[
+\begin{gathered}
+	\Sigma F = ma  \\
+	\vec{G_x} + \vec{R_x} = ma_x  \\
+	a_x = \frac{\vec{G_x} + \vec{R_x}}{m} \\
+\end{gathered}
+\]
+Vi vet at,
+\[
+G_x = mg\sin{\phi} \wedge R_x = \mu mg\cos{\phi} \\
+\]
+Da blir,
+\[
+\begin{gathered}
+	a_x = \frac{mg \sin{\phi} + \mu mg \cos{\phi}}{m} \\
+	a_x = g(\sin{\phi} + \mu \cos{\phi}) \\
+\end{gathered}
+\] \\
+\textbf{d)} \\
+For et legeme som beveger seg ned et skråplan,
+\[
+a_x = g(\sin{\phi} - \mu \cos{\phi})
+\]
+Her så blir $R$ negativ. \\
+\textbf{e)} \\
+Ifølge formelen så er $a_{opp} - a_{ned} = \mu 2g\cos{\phi}$, men dersom vi ikke bruker dette som utgangspunkt \\
+Men $a_{opp}$ og $a_{ned}$, så får vi, \\
+\[
+\begin{gathered}
+	g(\sin{\phi} + \mu\cos{\phi}) - g(\sin{\phi} - \mu\cos{\phi}) = 2\mu g \cos{\phi} \\
+	\mu = \frac{a_{opp} - a_{ned}}{2g\cos{\phi}}, Q.E.D \\
+\end{gathered}
+\]
+Dette er lov fordi vi har brukt $a_{opp}$ og $a_{ned}$ som utgangspunkt.
+% section teori (end)
+
+\section{Fremgangsmåte} % (fold)
+\label{sec:fremgangsmåte}
+\begin{enumerate}
+	\item Velger en vinkel $\phi$ 
+	\item Bruker fjæren for å skyte opp boksen
+	\item Gjentar (2) flere ganger
+	\item Tar målinger av (3)
+\end{enumerate}
+\subsection{Målinger} % (fold)
+\label{sub:målinger}
+Vinkel $\phi = 9^{\circ} \pm 0.1^{\circ}$
+Lengden av boksen er $25 \times 10^{-2}$ cm
+\begin{table}[htpb]
+	\centering
+	\caption{strekning (cm)}
+	\label{tab:label}
+	\begin{tabular}{ c  c }
+		$S_1$ & $81$ \\
+		$S_2$ & $84$ \\
+		$S_3$ & $82$ \\
+		$S_4$ & $81$ \\
+		$S_5$ & $85$ \\
+		$S_6$ & $84$ \\
+		$S_7$ & $85$ \\
+		$S_8$ & $84$ \\
+		$S_9$ & $81$ \\
+		$S_{10}$ & 85 \\
+		$S_{11}$ & 85 \\
+	\end{tabular}
+\end{table}
+% subsection målinger (end)
+% section fremgangsmåte (end)
+\newpage
+\section{Resultat} % (fold)
+\label{sec:resultat}
+\subsection{Python: akselerasjon} % (fold)
+\label{sub:python}
+\begin{lstlisting}[frame=single][language=Python]
+from math import *
+
+g = 9.81 # m/s^2
+friksjonsKonstant = 0.17 
+
+def akselerasjon(vinkel, retning):
+  if retning == "opp":
+    return g * (sin(vinkel) + friksjonsKonstant * cos(vinkel))
+  elif retning == "ned":
+    return g * (sin(vinkel) -  friksjonsKonstant * cos(vinkel))
+  else:
+    raise ValueError("Retningene må være opp eller ned")
+
+akselerasjonOpp = round(akselerasjon(radians(9), "opp"),20)
+akselerasjonNed = round(akselerasjon(radians(9), "ned"),20)
+
+print(akselerasjonOpp)
+print(akselerasjonNed)
+
+def friksjonTall(vinkel, akselerasjonOpp, akselerasjonNed):
+    return tan(vinkel), (akselerasjonOpp - akselerasjonNed)/(2*g*cos(vinkel))
+
+print(friksjonTall(radians(9),akselerasjonOpp, akselerasjonNed))
+\end{lstlisting}
+\begin{lstlisting}[frame=single][language=Python]
+Output:
+	3.1817899476551763 
+	-0.11254574356584655
+	(0.15838444032453627, 0.17)
+\end{lstlisting}
+% subsubsection output (end)
+\subsection{Python: bevegelse} % (fold)
+\label{sub:bevegelse}
+\begin{lstlisting}[frame=single][language=Python]
+from pylab import * 
+
+g = 9.81  
+angle = radians(9) 
+mu = 0.17 
+
+x = 0
+v = 0
+
+
+strekning = []
+tid = []
+t = 1 
+
+while t <= 10:
+    a = g * (sin(angle) + mu * cos(angle))
+    v = v + a * t 
+    x = v * t + 1/2 * a * t ** 2
+    strekning.append(x)
+    tid.append(t)
+    t = t + 1
+
+plot(tid, strekning)
+show()
+\end{lstlisting}
+% subsection bevegelse (end)
+% subsection python (end)
+% section resultat (end)
+\end{document}

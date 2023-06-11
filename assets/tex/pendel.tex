@@ -1,0 +1,243 @@
+%!TeX ts-program = xelatex
+%!TeX encoding = utf-8 Unicode
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage[norsk]{babel}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breaklines=true,
+  postbreak=\raisebox{0ex}[0ex][0ex]{\color{red}$\hookrightarrow$\space}
+}
+
+\title{Svingende pendelum}
+\author{Simon Bakken-Jantasuk}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\listoftables
+
+\pagebreak
+
+\section{Introduksjon} % (fold)
+\label{sec:introduksjon}
+\subsection{Hensikt} % (fold)
+\label{sub:hensikt}
+\begin{flushleft}
+	\begin{enumerate}
+		\item Å bestemme tyngdeakselersajonen, g, ved hjelp av en pendel. \\
+		\item Å bruke feilforplantningsreglene til å finne måleusikkerheten i et beregnet resultat.\\
+	\end{enumerate}
+\end{flushleft}
+\subsection{Oppsummering} % (fold)
+\label{sub:oppsummering}
+Vi har målt lengden til tråden, og regnet g ved at ser på $\phi$ som liten; sånn at vi kan se på pendelen som et harmonisk serie; som gir formelen (1) $g = \frac{4\pi^2}{T^2} l$ \\
+Ved bruk av (1) så regner vi ut $g$-verdiene. Vi regner med usikkerhet av $g$, ved hensyn til usikkerhet av tid. \\
+
+% subsection oppsummering (end)
+% subsection hensikt (end)
+% section introduksjon (end)
+
+
+\textbf{Utstyr} 
+\begin{enumerate}
+	\item Kule
+	\item Tråd
+	\item Krok
+	\item Linjal
+	\item Stoppeklokke
+\end{enumerate}
+
+\section{Teori} % (fold)
+\label{sec:teori}
+
+Bevegelsen av pendelen har vertikal sirkelbevegelse. Dette vil si at summen av kreftene peker innover mot sentrum mens fartsretningen endrer. Det virker en gravitasjonel kraft $V_g$ og en snorkraft $F_s$ på kulen.  \\
+For pendelen så er 
+\[
+\Sigma F = ma = mg\sin{\phi} 
+\] 
+Hvor 
+\[
+a = g\sin{\phi}
+\] 
+Vi vet at 
+\[
+a = -\omega^2x
+\] 
+Sånn at
+\[
+	g\sin{\phi} = -\omega^2x
+\] 
+Vi vet at
+\[
+x = l\phi 
+\] 
+Da må 
+\[
+	g\sin{\phi} = -\omega^2l\phi 
+\] 
+Vi vet at
+\[
+\omega = \frac{2\pi}{T} 
+\] 
+Da må
+\[
+\begin{gathered}
+	g\sin{\phi } = -\frac{4\pi^2}{T^2} l\phi \\
+	g = -\frac{4\pi^2l}{T^2} \frac{\phi}{\sin{\phi}} 
+\end{gathered}
+\] 
+De vinkelene vi jobber med er svært små. Så vi kan godt se på dette som en harmonisk serie. 
+\[
+\begin{gathered}
+	\lim_{\phi \to 0} g = \lim_{\phi \to 0} -\frac{4\pi^2l}{T^2} \frac{\phi}{\sin{\phi}}  \\
+	g = -\frac{4\pi^2}{T^2} l
+\end{gathered}
+\] 
+
+
+% section teori (end)
+
+\section{Fremgangsmåte} % (fold)
+\label{sec:fremgangsmåte}
+\begin{enumerate}
+	\item Fest tråden i kulen, og heng den opp slik at kulen får svinge fritt.
+	\item Gjennomfør nødvendige målinger og før opp resultatene.
+	\item Finn ut usikkerheten i de målte verdiene.
+	\item Bruk de målte verdiene med usikkerhet til å beregne tyngdens akselerasjon med usikkerhet.
+\end{enumerate}
+\subsection{Målinger} % (fold)
+\label{sub:målinger}
+Lengden $l$ på tråden var $86\times 10^{-2}$ m
+\begin{table}[htpb]
+	\centering
+	\caption{rundetid ($ T $), sekunder ($ s $)}
+	\label{tab:label}
+	\begin{tabular}{c c}
+		$T_1$ & 1.90 s \\
+		$T_2$ & 1.79 s \\
+		$T_3$ & 1.89 s \\
+		$T_4$ & 2.04 s \\
+		$T_5$ & 2.13 s \\
+		$T_6$ & 2.06 s \\
+		$T_7$ & 1.94 s \\
+		$T_8$ & 1.87 s \\
+		$T_9$ & 1.91 s \\
+		$T_{10}$ & 1.96 s \\
+	\end{tabular}
+\end{table}
+% subsection målinger (end)
+% section fremgangsmåte (end)
+\newpage
+\section{Resultat} % (fold)
+\label{sec:resultat}
+\subsection{Python} % (fold)
+\label{sub:python}
+
+
+
+\begin{lstlisting}[frame=single][language=Python]
+from math import *
+from pylab import *
+
+rundeTid = [
+    1.90,
+    1.79,
+    1.89,
+    2.04,
+    2.13,
+    2.06,
+    1.94,
+    1.87,
+    1.91,
+    1.96
+]
+
+lengdeTraad = 86 * 10 ** -2
+
+gjennomsnittVerdi = sum(rundeTid)/len(rundeTid)
+variasjonsBredde = max(rundeTid) - min(rundeTid)
+usikkerhet = variasjonsBredde/2
+
+$$$
+def g(i)
+	Regner ut gravitasjons akselerasjonen basert ved hensyn til array rundeTid.
+parameter
+	(Number) variabel i som er lik variabel til array rundeTid
+return 
+	(Number) gravitasjons akselerasjonen
+$$$
+
+def g(i):
+    return 4 * pi ** 2 / rundeTid[i] ** 2 * lengdeTraad
+
+i = 0
+
+while i < len(rundeTid):
+    g(i)
+    print(f"g_{i + 1}", g(i))
+    i = i + 1
+
+$$$
+def beregnerUsikkerhet(usikkerhet)
+	Beregner ut usikkerheten for gravitasjons akselerasjonen, ved hensyn til usikkerheten til tid.
+parameter
+	(Number) usikkerhet
+
+return
+	(Number) g regnet med usikkerhet 
+$$$
+
+def beregnerUsikkerhet(usikkerhet):
+    return (4 * pi ** 2 / (gjennomsnittVerdi + usikkerhet) ** 2) * lengdeTraad
+
+print("g med usikkerhet er mellom :", beregnerUsikkerhet(usikkerhet), beregnerUsikkerhet(-usikkerhet))
+\end{lstlisting}
+% subsection python (end)
+\subsubsection{Output} % (fold)
+\label{ssub:output}
+\begin{lstlisting}[frame=single][language=Python]
+Output:
+	g_1 9.404830786633626
+	g_2 10.596248288051994
+	g_3 9.504616091304106
+	g_4 8.158265844806659
+	g_5 7.483400370241221
+	g_6 8.000621910582382
+	g_7 9.02100094052168
+	g_8 9.709010592166601
+	g_9 9.306608683903235
+	g_10 8.837838176735577
+	g med usikkerhet er mellom : 7.561296608239082 10.727691893446588
+\end{lstlisting}
+
+
+% subsubsection output (end)
+% section resultat (end)
+\section{Diskusjon} % (fold)
+\label{sec:diskusjon}
+En måte å redusere usikkerhet på, kunne ha vært å latt pendelen bevege av seg selv. Dog, så er resultat forventet. 
+% section diskusjon (end)
+\subsection{Konklusjon} % (fold)
+\label{sub:konklusjon}
+Vi har målt lengden til tråden, og regnet g ved at ser på $\phi$ som liten; sånn at vi kan se på pendelen som et harmonisk serie; som gir formelen (1) $g = \frac{4\pi^2}{T^2} l$ \\
+Ved bruk av (1) så regner vi ut $g$-verdiene. Vi regner med usikkerhet av $g$, ved hensyn til usikkerhet av tid. \\
+
+\begin{center}
+	$g$ er $ca.$ mellom fra $7 m/s^2$ til $11 m /s^2$
+\end{center}
+% subsection konklusjon (end)
+\end{document}
