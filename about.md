@@ -4,16 +4,13 @@ title: About
 permalink: /about/
 ---
 
-## Navn
-
+#### Navn
 Simon
 
-## Interesser
-
+#### Interesser
 | Matematikk   |
 | Programmering| 
 | Linux        |
 
-# Email
-
+##### Email
 simonbakkenjantasuk@pm.me 
