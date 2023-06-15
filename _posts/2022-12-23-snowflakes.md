@@ -12,7 +12,14 @@ Utdrag fra ["Et makkverk av en oppgave"][1] skrevet av *Ingunn Helland*
 
 > Denne åpne oppgaven handler i år om en jente som løper på tredemølle. Hun teller kalorier, og lurer på hvor lenge hun må løpe for å forbrenne en sjokolade på 60 gram. I tillegg regner hun på hvor fort hun må løpe for å få god karakter på Cooper-testen.
 
-![Nice...](/assets/images/webm/angrypatrick.webm)
+# ESCAPE THE MATRIX!
+
+<div class="video-container">
+  <video autoplay loop muted>
+    <source src="/assets/images/webm/angrypatricki.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 Norge er fortapt. Norge har blitt et tulleland, faktisk, et klovneland!!!!!!!!!!!!!!!!!!
 
@@ -32,7 +39,12 @@ Vi har en gang folk som limer seg fast til vegger, gulv for å henvise hvor mye 
 
 HERRE MIN HATT!
 
-![udyr](/assets/images/webm/udyr.gif)
+<div class="video-container">
+  <video autoplay loop muted>
+    <source src="/assets/images/webm/udyr.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 Dette vanskapte udyr ser man oftest på lang sikt! og mange bemerker hvor forkrøblet de er i sin utvikling!!!
 
