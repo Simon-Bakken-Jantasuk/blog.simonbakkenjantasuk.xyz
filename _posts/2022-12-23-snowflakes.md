@@ -8,28 +8,37 @@ category: rant
 
 En matematikk oppgave har blitt fjernet fra eksamen, etter å ha fornærmet flere på skolen. 
 
-[https://www.bt.no/btmeninger/debatt/i/nQ1BX5/et-makkverk-av-en-oppgave#ui-core-comments](https://www.bt.no/btmeninger/debatt/i/nQ1BX5/et-makkverk-av-en-oppgave#ui-core-comments)
+Utdrag fra ["Et makkverk av en oppgave"][1] skrevet av *Ingunn Helland*
 
-"_Denne åpne oppgaven handler i år om en jente som løper på tredemølle. Hun teller kalorier, og lurer på hvor lenge hun må løpe for å forbrenne en sjokolade på 60 gram. I tillegg regner hun på hvor fort hun må løpe for å få god karakter på Cooper-testen._ "
+> Denne åpne oppgaven handler i år om en jente som løper på tredemølle. Hun teller kalorier, og lurer på hvor lenge hun må løpe for å forbrenne en sjokolade på 60 gram. I tillegg regner hun på hvor fort hun må løpe for å få god karakter på Cooper-testen.
 
 ![angrypatrick](/assets/images/webm/angrypatrick.webm)
 
-Norge er fortapt. Norge har blitt et tulleland, faktisk, et klovneland.
+Norge er fortapt. Norge har blitt et tulleland, faktisk, et klovneland!!!!!!!!!!!!!!!!!!
 
-For det første, så synes jeg det er en gang rart at personer her i verden blir fornærmet over noe så smått. Problemet oppstår ved at dette tas som en kritikk mot tykke personer. Men selveste oppgaven er for å beregne hvor mye kalorier en person forbrenner; og er så langt borte fra en kritikk så mye så mulig. 
+For det første, så synes jeg det er en gang rart at folk her i verden blir fornærmet over noe så smått. 
 
-For det andre, så er det mer rart at dette engang ble fjernet.
+Det er nesten som at vi idag kjeder oss så mye, at vi må begynne å LAGE PROBLEMER! FORDI VI FAEN SELV IKKE HAR NOEN...
 
-Jeg hadde sagt at dette er en form av maktmisbruk. Det finnes personer her i verden som vet at andre er svake; og tar dette er i bruk til å få ting fjernet for å tilfredsstille sin agenda. 
+LIKEVEL, problemet oppstår ved at dette tas som en kritikk mot tykke folk, men selveste oppgaven er for å beregne hvor mye kalorier en person forbrenner; og er langt borte fra kritikk... 
 
-Vi har en gang personer som limer seg fast til vegger, gulv for å henvise hvor mye de elsker naturen. Personer som ødelegger dyre historiske malerier for å henvise sin egen agenda... 
+For det andre, så er det mer rart at dette engang ble fjernet!
 
-[https://www.vg.no/nyheter/innenriks/i/q16na0/aktivister-forsoekte-aa-lime-seg-fast-paa-munchs-skrik-paa-nasjonalmuseet](https://www.vg.no/nyheter/innenriks/i/q16na0/aktivister-forsoekte-aa-lime-seg-fast-paa-munchs-skrik-paa-nasjonalmuseet)
+Jeg hadde sagt at dette er en form av maktmisbruk, eller at folk faktisk KJEDER SEG! Det finnes folk her i verden som vet at andre er svake; og tar dette er i bruk til å få ting fjernet for å tilfredsstille sin agenda. 
+
+Vi har en gang folk som limer seg fast til vegger, gulv for å henvise hvor mye de elsker naturen, folk som ødelegger dyre historiske malerier for å henvise sin egen agenda...
+
+[Aktivister forsøkte å lime seg fast på Munchs «Skrik» på Nasjonalmuseet][2]
+
+HERRE MIN HATT!
 
 ![udyr](/assets/images/webm/udyr.gif)
 
-Dette vanskapte udyr ser man oftest på lang sikt! og mange bemerker hvor forkrøblet de er i sin utvikling.
+Dette vanskapte udyr ser man oftest på lang sikt! og mange bemerker hvor forkrøblet de er i sin utvikling!!!
 
-En ung kvinne oftest, eller en mann med 0 testosteron, med enten blått eller grønt hår. 
+En ung kvinne oftest, eller en mann med 0 testosteron, med enten blått eller grønt hår!!! Hehe!!! 
 
-Hei– Jeg sier bare sannheten! Jeg har bemerket at dette udyret er oftest i denne formen...og oftest ligger ganske radikalt til venstre på det politiske spektrum. 
+Hei– Jeg sier bare sannheten! Jeg har bemerket at dette udyret er oftest i denne formen...og oftest ligger ganske radikalt til venstre på det politiske spektrum. 🧐 Dodod!
+
+[1]: https://www.bt.no/btmeninger/debatt/i/nQ1BX5/et-makkverk-av-en-oppgave#ui-core-comments)
+[2]: https://www.vg.no/nyheter/innenriks/i/q16na0/aktivister-forsoekte-aa-lime-seg-fast-paa-munchs-skrik-paa-nasjonalmuseet
