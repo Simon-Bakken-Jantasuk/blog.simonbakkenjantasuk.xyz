@@ -8,7 +8,10 @@ category: matematikk
 La oss se på noen rekker.
 
 Aritmetiske rekken på eksplisitt form er, 
-$a_n = a_1 + (n - 1)d$
+
+$$a_n = a_1 + (n - 1)d$$
+
+\(a_n = a_1 + (n - 1)d\)
 
 Setter inn for $ n + 1 $,
 
