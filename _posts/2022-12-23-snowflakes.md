@@ -12,7 +12,7 @@ Utdrag fra ["Et makkverk av en oppgave"][1] skrevet av *Ingunn Helland*
 
 > Denne åpne oppgaven handler i år om en jente som løper på tredemølle. Hun teller kalorier, og lurer på hvor lenge hun må løpe for å forbrenne en sjokolade på 60 gram. I tillegg regner hun på hvor fort hun må løpe for å få god karakter på Cooper-testen.
 
-![angrypatrick](/assets/images/webm/angrypatrick.webm)
+![Nice...](/assets/images/webm/angrypatrick.webm)
 
 Norge er fortapt. Norge har blitt et tulleland, faktisk, et klovneland!!!!!!!!!!!!!!!!!!
 

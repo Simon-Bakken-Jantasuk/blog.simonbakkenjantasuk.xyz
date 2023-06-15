@@ -19,12 +19,6 @@ plugins:
 
 remote_theme: jekyll/minima
 
-markdown: kramdown
-
-kramdown:
-  math_engine: katex 
-
-
 disqus:
   shortname: simonbakkenjantasuk
 
