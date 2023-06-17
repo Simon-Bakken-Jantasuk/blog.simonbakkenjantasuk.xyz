@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: Hvorfor har vesten styrt seg bort fra Kristendommen?
+title: Hvorfor har vesten styrt seg bort fra kristendommen?
 date: 2023-06-11
 author: Simon
 categories: filosofi
