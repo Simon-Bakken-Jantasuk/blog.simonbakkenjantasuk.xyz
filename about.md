@@ -15,7 +15,7 @@ permalink: /about/
 89RBPLiAwqvEtmTH5EVr6pZ7p7y8k9dzLiqYWaZoLJSXKAaiALMgqVhHcBxBffc2JVVhJhfCqn8E8jAqwmp2CukTGZUugrH
 ```
 
-#### GPG
+#### PGP 
 
 ```
 -----BEGIN PGP PRIVATE KEY BLOCK-----
