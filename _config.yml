@@ -1,9 +1,12 @@
 title: Simon Bakken-Jantasuk
+
 author:
   name: Simon-Bakken-Jantasuk
   email: simonbakkenjantasuk@pm.me
 description: >- 
   En blog som omhandler mye rart...
+
+paginate: 5
 
 minima:
   skin: auto 
