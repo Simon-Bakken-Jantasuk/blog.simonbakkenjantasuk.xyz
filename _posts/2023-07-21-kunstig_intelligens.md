@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: Bruken av MediaPipe og HaarCascade for ansikts gjenkjenning
-date: 2023-06-21
+date: 2023-07-21
 author: Simon
 categories: programmering teknologi 
 ---
