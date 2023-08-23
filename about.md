@@ -8,6 +8,9 @@ permalink: /about/
 
 `simonbakkenjantasuk@pm.me`
 
+#### CV 
+
+Her er min CV: [norwegian](/assets/pdf/CV.pdf)
 
 #### Monero
 
