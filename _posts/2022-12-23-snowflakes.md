@@ -3,7 +3,7 @@ layout: post
 title: Norge er fortapt...
 date: 2022-12-23
 author: Simon
-category: rant
+category: generell 
 ---
 
 En matematikk oppgave har blitt fjernet fra eksamen, etter å ha fornærmet flere på skolen. 
