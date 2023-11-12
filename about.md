@@ -1,16 +1,16 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Om meg 
+permalink: /meg/
 ---
 
-##### Email
+##### Epost 
 
 `simonbakkenjantasuk@pm.me`
 
-#### CV 
+#### Curriculum Vitae
 
-Her er min CV: [norwegian](/assets/pdf/CV.pdf)
+[CV](/assets/pdf/CV.pdf)
 
 #### Monero
 
