@@ -9,7 +9,7 @@ author:
 description: >- 
    "When a student comes and asks, 'Should I become a mathematician?' the answer should be no. If you have to ask, you shouldn't even ask." - Paul Halmos
 
-paginate: 5
+paginate: 3
 
 minima:
   skin: auto 

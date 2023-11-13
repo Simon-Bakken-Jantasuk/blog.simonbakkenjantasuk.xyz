@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Eksempel på Linear search og Binary search
+title: Linear og binary search 
 date: 2023-08-26
 author: Simon
-category: programmering python
+categories: programmering python
 ---
 
 ```python

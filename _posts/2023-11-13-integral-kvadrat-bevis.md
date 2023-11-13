@@ -1,0 +1,93 @@
+---
+layout: post
+title: Bevis av arealet av en kvadrat ved bruk av integrasjon
+date: 2023-11-13
+author: Simon
+categories: Matematikk 
+---
+> "Simon! Integrasjon er areal under grafen av en funksjon vel?" – tydelig engasjert fremtidig matematiker 
+
+Ja– til en viss grad så er det sant. Det er best å se på integrasjon som en summering av små endringer ved hensyn til et forhold; kollektivet, altså summen kan således beskrive areal, dersom det er snakk om noe geometrisk, men den kan også beskrive den kinetisk energien til et fallende legeme. 
+
+Det er derfor ikke riktig å bare begrense idèen om integrasjon som "areal".
+
+I dette innlegget, så kommer vi til å se på et eksempel til noe de fleste vil kalle for "naturlig" eller "instinktivt", men er uansett en interessant resonnement for noe vi kan kalle for "elementært" eller "barneskolematte".
+
+For en sirkel med origo som sentrum, slik at, 
+
+$$x^2 + y^2 = r^2$$
+
+Ved lignende måte, så er ligningen av et kvadrat, 
+
+$$\lvert x \lvert + \lvert y \lvert = s$$
+
+Ut fra den så kan vi løse for $$\lvert x \lvert$$ og $$\lvert y \lvert$$, slik at,
+
+$$
+\begin{align}
+\lvert x \lvert &= s - \lvert y \lvert \\
+\lvert y \lvert &= s - \lvert x \lvert
+\end{align}
+$$
+
+Integralet av (1) og (2) ved hensyn til dets variabel er,
+
+$$
+\begin{align}
+\int_{-s}^{s} (s - \lvert y \lvert) \, \mathrm{d} y \\
+\int_{-s}^{s} (s - \lvert x \lvert) \, \mathrm{d} x \\
+\end{align}
+$$
+
+Husk at,
+
+$$
+\begin{align}
+\int [f(x) + g(x)] \, \mathrm{d}x &= \int f(x) \, \mathrm{d}x + \int g(x) \, \mathrm{d}x \\
+\int k \, \mathrm{d}x &= kx + C  \\
+\int \lvert x \lvert \, \mathrm{d}x &= \frac{x \lvert x \lvert}{2}
+\end{align}
+$$
+
+Regner ut integralet av (1) og (2) ved hensyn til dets variariabel, slik at, 
+
+$$
+\begin{align*}
+\int_{-s}^{s} (s - \lvert y \lvert) \, \mathrm{d} y \\
+
+\text{(5)} \\
+
+&= \int_{-s}^{s} s \, \mathrm{d} y - \int_{-s}^{s} \lvert y \lvert \, \mathrm{d} y \\
+
+\text{(6) og (7)} \\
+
+&= \left[sy - \frac{y \lvert y \lvert}{2} \right]_{-s}^{s} \\
+
+&= \left[\left(\frac{2s(s) - s \lvert s \lvert}{2}\right) - \left(\frac{2s(-s) -(-s) \lvert s \lvert}{2}\right)\right] \\
+&= \frac{2s^2 - s^2}{2} + \frac{2s^2 - s^2}{2} \\
+&= \frac{4s^2 - 2s^2}{2} \\
+&= s^2 \\
+
+\int_{-s}^{s} (s - \lvert x \lvert) \, \mathrm{d} x \\
+
+\text{(5)} \\
+
+&= \int_{-s}^{s} s \, \mathrm{d} x - \int_{-s}^{s} \lvert x \lvert \, \mathrm{d} x \\
+
+\text{(6) og (7)} \\
+
+&= \left[sx - \frac{x \lvert x \lvert}{2} \right]_{-s}^{s} \\
+
+&= \left[\left(\frac{2s(s) - s \lvert s \lvert}{2}\right) - \left(\frac{2s(-s) -(-s) \lvert s \lvert}{2}\right)\right] \\
+&= \frac{2s^2 - s^2}{2} + \frac{2s^2 - s^2}{2} \\
+&= \frac{4s^2 - 2s^2}{2} \\
+&= s^2 \\
+
+
+\int_{-s}^{s} (s - \lvert y \lvert) \, \mathrm{d} y = \int_{-s}^{s} (s - \lvert x \lvert) \, \mathrm{d} x = A\\
+\end{align*}
+$$
+
+Nå har vi i andre ord bevist arealet av et kvadrat ved bruk av den antideriverte! 
+
+Tydelig nok var det fra før av!

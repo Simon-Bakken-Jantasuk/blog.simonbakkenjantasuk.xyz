@@ -3,7 +3,7 @@ layout: post
 title: Pendel, elektronkanon, loop og skråplan
 date: 2022-12-19
 author: Simon
-categories: realfag fysikk
+category: fysikk
 ---
 Fire forskjellige forsøk for fysikk 2.
 
