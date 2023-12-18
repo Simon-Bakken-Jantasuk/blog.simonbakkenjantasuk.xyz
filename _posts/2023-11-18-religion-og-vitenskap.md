@@ -27,7 +27,9 @@ Derimot, for vitenskapsmannen så er hans verden begrenset til noen få aksiomer
 2. Teorien om all kunnskap er et matematisk system 
 3. Matematikk er transendent
 
-Den eneste forskjellen mellom disse to systemene er den metafysiske egenskapen ved det vi snakker om. I den første så snakker vi om et vesen, mens det andre så snakker vi ikke om et vesen. Argumentet om Gud sin eksistens handler egentlig om "Hva er transendent?" og ikke "Gud eksisterer".  
+Den eneste forskjellen mellom disse to systemene er den metafysiske egenskapen ved det vi snakker om. I den første så snakker vi om et vesen, mens det andre så snakker vi ikke om et vesen. Argumentet om Gud sin eksistens handler egentlig om "Hva er transendent?". 
+
+Her har jeg også definert matematikk som transendent. Det vil ikke si at vi ikke kan forstå matematikken, fordi det har vi definert som sant ved (1). Det vil si at matematiske sannheter er ikke bare avledet kun fra observasjon og logisk utledning. Det finnes også matematiske sannheter som bare er en del av realitet, altså det som er uavhengig av erfaring. Ofte betegnes slik som priori.
 
 #### Hva er målet til den religiøse- og vitenskapsmannen?
 
