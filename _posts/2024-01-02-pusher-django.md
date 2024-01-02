@@ -64,8 +64,8 @@ def direct_chat(request, receiver_id):
 ```
 
 ```html
-<h1>Private Chat with {{ receiver_user.username }}</h1>
-<h1>chat-{{initiator_id}}-to-{{receiver_id}}</h1>
+<h1>Private Chat with {% raw %}{{ receiver_user.username }} {% endraw%}</h1>
+<h1>chat-{% raw %}{{initiator_id}} {% endraw%}-to-{% raw %}{{receiver_id}} {% endraw %}</h1>
 
 {#
 Pipe the initiator_id and receiver_id from context as json_script
@@ -75,16 +75,20 @@ Another way to do this is to mix the Javascript and Django templating.
 But it is better practice to keep the logic seperate...
 #}
 
+{% raw %}
 {{ initiator_id|json_script:"initiator_id" }}
 {{ receiver_id|json_script:"receiver_id" }}
+{% endraw %}
 
 <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 
 <div id="messageList"></div>
 
 <form action="{% raw %}{% url 'direct_chat' receiver_id %}{% endraw %}" method="POST" id="private-chat">
-    {% raw %}{% csrf_token %} {% endraw %}
+    {% raw %}
+    {% csrf_token %} 
     {{ form.as_p }}
+    {% endraw %}
     <input type="submit">
 </form>
 
